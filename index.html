@@ -1,10 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="app">
 <head>
 	<title>Marcelo A. Naegeler</title>
 	<meta charset="UTF-8">
+	<base href="/marcelonaegeler/" />
 	<link href="http://fonts.googleapis.com/css?family=Roboto:400,300" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="/marcelonaegeler/assets/stylesheets/style.css">
+	<script type="text/javascript" src="/marcelonaegeler/assets/javascripts/angular.min.js"></script>
+	<script type="text/javascript" src="/marcelonaegeler/assets/javascripts/angular-route.min.js"></script>
+	<script type="text/javascript" src="/marcelonaegeler/assets/javascripts/angular-animate.min.js"></script>
 </head>
 <body>
 	<main>
@@ -27,9 +31,8 @@
 								</ul>
 							</div>
 						</li>
-						<li><a href="#" class="nav-item focus-item">Link do menu</a></li>
-						<li><a href="#" class="nav-item focus-item">Link do menu</a></li>
-						<li><a href="#" class="nav-item focus-item">Link do menu</a></li>
+						<li><a href="#" class="nav-item focus-item">Página inicial</a></li>
+						<li><a href="#contato" class="nav-item focus-item">Contato</a></li>
 					</ul>
 				</div>
 				<div class="header-block header-bottom">
@@ -38,16 +41,11 @@
 			</div>
 		</header>
 
-		<div id="content">
-			<div>
-				<h1>Conteúdo teste</h1>
-				<p>Aqui vai um conteúdo massa.</p>
-				<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-			</div>
-		</div>
+		<div id="content" class="page {{ pageClass }}" ng-view></div>
 
 	</main>
 	<script type="text/javascript" src="/marcelonaegeler/assets/javascripts/jquery-1.10.2.min.js"></script>
 	<script type="text/javascript" src="/marcelonaegeler/assets/javascripts/bootstrap.js"></script>
+	<script type="text/javascript" src="/marcelonaegeler/app.js"></script>
 </body>
 </html>

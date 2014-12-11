@@ -1,0 +1,7 @@
+RewriteEngine On
+
+RewriteRule ^contato/teste/?$ views/contato.php
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ index.html?q=$2 [L,QSA]
