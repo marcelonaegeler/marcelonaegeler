@@ -1,20 +1,31 @@
 * { margin:0; padding:0; font-family: "Roboto", Arial, sans-serif; }
-html { font-size:14px; font-weight:300; }
+html { font-size:14px; font-weight:300; background-color:#fff; height: 100%; }
+html, body, main { height: 100%; }
 ul { list-style:none; }
 a { text-decoration:none; }
 h1, h2, h3 { margin-bottom:15px; font-weight:500; }
 p { line-height:24px; }
 p+p { margin-top:10px; }
 
-header { position:absolute; left:0; right:0; display:table; width:280px; height:100%; background-color:#333; box-shadow:1px 0 25px #333; }
-.logo { margin-bottom:30px; text-align:center; }
-.logo a { font-size:24px; font-weight:500; color:#fff; }
-.logo-subtitle { font-size:12px; display:block; color:#eee; text-transform:uppercase; }
-.vertical-middle { display:table-cell; vertical-align:middle; }
-.nav-item { display:block; padding:10px; text-align:center; color:#999; transition:color, background-color 0.1s linear; }
-.nav-item:hover,
-.nav-item.active { color:#fff; background-color:#444; }
+/*
+* Header - Nav bar
+*/
+header { position: fixed; left:0; right:0; width:280px; height:100%; background-color:#fff; border-right:1px solid #e0e0e0; box-sizing:border-box; overflow: auto; min-height: 100%;}
+.wrap-header { position:relative; min-height:100%; padding-bottom: 45px; box-sizing: border-box;}
+.header-block { padding:10px 0; }
+.header-block+.header-block { border-top:1px solid #e0e0e0; }
+.header-bottom { position: absolute; bottom:0; width:100%; }
 
-#content { margin-left:280px; padding:50px 80px; min-height:300px; background-color:#ececec; }
+.logo { display:block; padding:10px 20px; color:#666; font-size:16px; font-weight:bold; }
+.nav { font-size:12px; }
+.nav-item { display:block; padding: 15px 0 15px 20px; font-weight:700; color:#333; }
+.nav-subitem { display:block; padding: 10px 0 10px 30px; font-weight:500; color: #03a9f4; }
+.focus-item:focus { background-color: #eee; outline: 0; }
+.small { font-size:12px; padding:0 20px; }
+
+.collapsible { overflow: hidden; position: relative; transition: height 0.2s ease-out; }
+.collapsible.collapsed { height: 0; }
+.list-collapsible { position:absolute; bottom:0; width:100%; }
 
 
+#content { margin-left:280px; padding:50px 80px; height: 100%; background-color:#f9f9f9; box-sizing: border-box;}
