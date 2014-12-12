@@ -33,18 +33,21 @@ header { position: fixed; left:0; right:0; width:280px; height:100%; background-
 .collapsible.collapsed { height: 0; }
 .list-collapsible { position:absolute; bottom:0; width:100%; }
 
-
-#content { margin-left:280px; height: 100%; background-color:#f9f9f9; }
-
+#content { position:relative; margin-left:280px; height: 100%; background-color:#f9f9f9; overflow: hidden;}
 .title-bar { padding:0 100px; font-size:24px; background-color:#3f51b5; color:#fff; }
 .content-title { padding:100px 0 40px;}
-
 .page-content { padding:50px 100px; box-sizing: border-box; width: 100%; max-width: 1200px;}
 .content-left { float:left; width: 70%; }
 .panel-right { float:right; width: 25%; }
 
+.contato .title-bar { background-color:#009688; }
+.notFound .title-bar { background-color:#000; }
+/* ng-view animate  */
+.page { position:absolute; width:100%; height:100%; }
+.page.ng-leave, .page.ng-enter { transition:all 0.3s linear; }
 
-.page.ng-enter, 
-.page.ng-leave { opacity:0; transition:opacity 0.5s linear; }
-.page.ng-enter.ng-enter-active { opacity:1; }
-.page.ng-leave.ng-leave-active { opacity:.5; }
+.page.ng-enter { top:-100px; opacity:0; }
+.page.ng-enter.ng-enter-active { top:0; opacity:1; }
+
+.page.ng-leave { left:0; opacity:1; }
+.page.ng-leave.ng-leave-active { left:100px; opacity:0; }
